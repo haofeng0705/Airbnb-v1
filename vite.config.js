@@ -4,7 +4,7 @@ import { join } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react() ],
   //配置 Vite 别名
   resolve: {
     alias: {

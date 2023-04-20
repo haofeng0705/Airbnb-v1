@@ -7,15 +7,19 @@ import { Provider } from "react-redux";
 import "./assets/css/reset.less";
 import "normalize.css";
 import store from "./store";
+import { ThemeProvider } from "styled-components";
+import theme from "./assets/theme";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(
   // 异步加载需要用 suspense 进行包裹
   <Suspense fallback="loading">
     <Provider store={store}>
-      <HashRouter>
-        <App />
-      </HashRouter>
+      <ThemeProvider theme={theme}>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </ThemeProvider>
     </Provider>
   </Suspense>
 );
