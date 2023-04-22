@@ -17,8 +17,7 @@ const ScrollView = memo((props) => {
     const scrollWidth = scrollContentRef.current.scrollWidth // 一共可以滚动的宽度
     const clientWidth = scrollContentRef.current.clientWidth // 本身占据的宽度
     const totalDistance = scrollWidth - clientWidth
-    totalDistanceRef.current = totalDistance  // 将 totalDistance 保存下来
-    // 控制显示
+    totalDistanceRef.current = totalDistance 
     setShowRight(totalDistance > 0)
   }, [props.children])
 

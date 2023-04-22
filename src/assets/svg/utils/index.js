@@ -1,8 +1,3 @@
-/**
- * @param {*} styleStr  svg 的原生样式
- * @returns 返回转换好的 jsx 语法对象
- * style string to object
- */
 function styleStrToObject(styleStr) {
   const obj = {}
   const s = styleStr.toLowerCase().replace(/-(.)/g, function (m, g) {
